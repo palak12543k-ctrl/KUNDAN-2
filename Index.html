@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="hi">
-<head><!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1829212978267172');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1829212978267172&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+<head>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1829212978267172');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1829212978267172&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>playboymeeting - Telegram Join</title>
+    
+    <!-- External CSS & Libraries -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -105,7 +109,7 @@ src="https://www.facebook.com/tr?id=1829212978267172&ev=PageView&noscript=1"
         }
 
         .join-btn:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
             box-shadow: 0 0 35px rgba(217, 70, 239, 1), 0 0 45px rgba(6, 182, 212, 0.9);
         }
 
@@ -113,7 +117,7 @@ src="https://www.facebook.com/tr?id=1829212978267172&ev=PageView&noscript=1"
             transform: scale(0.98);
         }
 
-        /* Star Animation CSS Canvas fallback */
+        /* Dynamic Star Particle */
         .star {
             position: absolute;
             background: white;
@@ -129,33 +133,33 @@ src="https://www.facebook.com/tr?id=1829212978267172&ev=PageView&noscript=1"
 </head>
 <body class="min-h-screen flex items-center justify-center p-4 relative overflow-y-auto">
 
+    <!-- Background Particle Canvas -->
     <div id="particles-js"></div>
 
     <main class="w-full max-w-md flex flex-col items-center justify-center my-auto z-10 py-6">
         
         <!-- Top Profile Avatar Circle -->
         <div class="glowing-circle glowing-circle-lg mb-6 bg-black flex items-center justify-center overflow-hidden">
-            <!-- Icon/Profile Image Inside Ring -->
             <i class="fa-solid fa-crown text-5xl text-cyan-400 drop-shadow-[0_0_10px_rgba(0,240,255,0.8)]"></i>
         </div>
 
-        <!-- Central Card Container -->
+        <!-- Central Neon Card Container -->
         <div class="neon-card w-full rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center space-y-6">
             
-            <!-- Title -->
-            <h1 class="text-3xl font-extrabold text-white tracking-wide text-shadow-glow">
+            <!-- Page Title -->
+            <h1 class="text-3xl font-extrabold text-white tracking-wide">
                 playboymeeting
             </h1>
 
-            <!-- Real Service Badge -->
+            <!-- Service Badge -->
             <div class="neon-badge px-6 py-2 rounded-2xl flex items-center justify-center space-x-2">
                 <span class="text-white font-bold text-base sm:text-lg tracking-wide">Real service</span>
                 <span class="text-xl">🔥</span>
             </div>
 
             <!-- Join Telegram Main Button -->
-            <a href="https://t.me/+uECO1q_eLqJiMmRl" target="_blank" id="telegram-link" class="w-full">
-                <button class="join-btn w-full py-4 px-6 rounded-full text-white font-extrabold text-xl sm:text-2xl tracking-wider uppercase flex items-center justify-center gap-3 cursor-pointer">
+            <a href="https://t.me/+uECO1q_eLqJiMmRl" target="_blank" id="telegram-link" class="w-full block">
+                <button class="join-btn w-full py-4 px-6 rounded-full text-white font-extrabold text-xl sm:text-2xl tracking-wider uppercase flex items-center justify-center gap-3 cursor-pointer border-none">
                     <i class="fa-brands fa-telegram text-2xl sm:text-3xl"></i>
                     JOIN TELEGRAM
                 </button>
@@ -170,14 +174,14 @@ src="https://www.facebook.com/tr?id=1829212978267172&ev=PageView&noscript=1"
 
             <!-- Auto Join Status Bar -->
             <div class="neon-badge w-full py-3 px-4 rounded-2xl">
-                <p class="text-amber-300 font-semibold text-sm sm:text-base tracking-wide flex items-center justify-center gap-2">
+                <p class="text-amber-300 font-semibold text-sm sm:text-base tracking-wide flex items-center justify-center gap-2 m-0">
                     Auto joining in <span id="sec-text" class="text-white font-bold">15</span> seconds...
                 </p>
             </div>
 
         </div>
 
-        <!-- Footer Info -->
+        <!-- Footer Copyright -->
         <p class="text-gray-400 text-xs mt-6 text-center tracking-wider">
             &copy; 2026 playboymeeting. All rights reserved.
         </p>
@@ -191,7 +195,7 @@ src="https://www.facebook.com/tr?id=1829212978267172&ev=PageView&noscript=1"
         const counterElement = document.getElementById('counter');
         const secTextElement = document.getElementById('sec-text');
 
-        // Dynamic Countdown Logic
+        // Dynamic Countdown and Auto-Redirect Logic
         const timer = setInterval(() => {
             secondsLeft--;
 
@@ -208,14 +212,16 @@ src="https://www.facebook.com/tr?id=1829212978267172&ev=PageView&noscript=1"
                 counterElement.innerText = ".00";
                 secTextElement.innerText = "0";
                 
-                // Auto redirect to telegram link
+                // Redirect to target Telegram Link
                 window.location.href = TELEGRAM_URL;
             }
         }, 1000);
 
-        // Canvas / CSS Star field generator for background
+        // Starfield Particle Generator
         function createStars() {
             const container = document.getElementById('particles-js');
+            if (!container) return;
+            
             const starCount = 80;
 
             for (let i = 0; i < starCount; i++) {
